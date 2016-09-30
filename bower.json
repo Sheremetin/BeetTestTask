@@ -1,0 +1,26 @@
+{
+  "name": "mytest",
+  "description": "test task",
+  "main": "gulpfile.js",
+  "authors": [
+    "insh"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "frontend"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.0",
+    "font-awesome": "^4.6.3",
+    "bootstrap": "^3.3.7"
+  }
+}
