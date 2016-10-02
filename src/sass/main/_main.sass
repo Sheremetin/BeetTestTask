@@ -1,10 +1,159 @@
-.container
-  padding-top: 20px
+.container-fluid
+  height: 100%
+  background: #1bbc9b
 
+  .login-section
+    position: absolute
+    width: calc(100% - 30px)
+    top: calc(50% - 158px)
 
-  .clear
-    clear: both
-    display: none
+    @include breakpoint(768px)
+      top: calc(50% - 88px)
 
-    @include breakpoint(736px)
-      display: block
+    &-logo
+      &-wrp
+        text-align: center
+        width: 100%
+
+        @include breakpoint(768px)
+          width: 30%
+          float: right
+          text-align: left
+
+      &-link
+        text-decoration: none
+
+      &-text
+        color: #ffffff
+        line-height: 18px
+        font-size: 12px
+
+    &-form
+      border-radius: 5px
+      background: #f0edee
+      text-align: center
+      padding: 15px
+      position: relative
+      margin-top: 30px
+
+      @include breakpoint(768px)
+        margin-top: 0
+
+      &:before
+        display: block
+        content: ''
+        position: absolute
+        left: calc(50% - 8px)
+        top: 0
+        margin-top: -7px
+        width: 0
+        height: 0
+        z-index: 2
+        border-right: 8px solid transparent
+        border-bottom: 8px solid #f0edee
+        border-left: 8px solid transparent
+
+        @include breakpoint(768px)
+          display: none
+
+      &:after
+        display: none
+        content: ''
+        position: absolute
+        left: 0
+        top: 25px
+        margin-left: -7px
+        width: 0
+        height: 0
+        border-top: 8px solid transparent
+        border-right: 8px solid #f0edee
+        border-bottom: 8px solid transparent
+        z-index: 2
+
+        @include breakpoint(768px)
+          display: block
+
+      .form-group
+        margin-right: 0
+        margin-left: 0
+        margin-bottom: 10px
+        position: relative
+
+        &:after
+          content: ''
+          font-family: 'FontAwesome'
+          position: absolute
+          top: 0
+          right: 0
+          z-index: 2
+          display: block
+          font-size: 14px
+          padding: 8px
+          line-height: 18px
+          text-align: center
+          pointer-events: none
+          box-sizing: border-box
+          color: #bec8ca
+
+        &.is-login
+          &:after
+            content: '\f007'
+
+        &.is-password
+          &:after
+            content: '\f023'
+
+      &-input
+        border: transparent
+        outline: none !important
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        padding-right: 20px
+
+        &:focus
+          box-shadow: none !important
+          outline: none !important
+          -webkit-appearance: none !important
+          -moz-appearance: none !important
+          appearance: none !important
+
+      input::-webkit-input-placeholder
+        color: #c1c5c7
+
+      input::-moz-placeholder
+        color: #c1c5c7
+
+      input:-moz-placeholder
+        color: #c1c5c7
+
+      input:-ms-input-placeholder
+        color: #c1c5c7
+
+      &-button
+        background: #1bbb9b
+        color: #ffffff
+        margin-bottom: 10px
+        outline: none !important
+
+        &:focus
+          outline: none !important
+          -webkit-appearance: none !important
+          -moz-appearance: none !important
+          appearance: none !important
+
+        i
+          margin-right: 5px
+          display: none
+
+        .is-shown
+          display: inline-block
+
+      &-link
+        display: block
+        color: #d7dce0
+        text-decoration: underline
+
+        &:hover
+          text-decoration: none
+

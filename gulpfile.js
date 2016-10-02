@@ -1,6 +1,4 @@
-/**
- * Created by In on 10.09.2016.
- */
+
 const SRC_PATH = './src/';
 const ASSETS_PATH = './dist/';
 

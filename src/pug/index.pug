@@ -4,15 +4,36 @@ html(lang='en', ng-app='CounterApp')
     meta(charset='UTF-8')
     title Title
     meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable = no")
-    //link(href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet")
     link(rel='stylesheet', type='text/css', href="css/vendor.min.css")
     link(rel='stylesheet', type='text/css', href="css/main.min.css")
   body
-    .container
+    .container-fluid
+      .login-section
+        .col-xs-12.col-sm-4.login-section-logo
+          .login-section-logo-wrp
+            a.login-section-logo-link
+              img(src='images/letter.jpg')
+            p.login-section-logo-text
+              | Welcome to
+              br
+              b
+                | Mail App
+        .col-xs-12.col-sm-4.login-section-form
+          form.form-horizontal
+            .form-group.is-login
+              label.sr-only(for='nameField') Login
+              input#nameField.form-control.login-section-form-input(type='text', placeholder='Enter your name'
+              required='require')
+            .form-group.is-password
+              label.sr-only(for='passwordField') Password
+              input#passwordField.form-control.login-section-form-input(type='password', placeholder='Password' required)
+            button.btn.btn-block.login-section-form-button(type='submit')
+              i.fa.fa-refresh.fa-spin.js-trigger
+              | Login
+            a.login-section-form-link
+              | Lost your password?
 
     script(src='js/vendor.min.js')
     script(src='js/all.min.js')
-    script.
-      alert('Hello World');
 
 
