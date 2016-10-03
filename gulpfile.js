@@ -25,7 +25,7 @@ var gulp = require('gulp'),
     batch = require('gulp-batch');
 
 gulp.task('build', ['clean', 'watch'], function () {
-    gulp.start('scripts', 'pug', 'img', 'sass', 'vendorjs', 'vendorcss');
+    gulp.start('scripts', 'pug', 'img', 'sass', 'fonts', 'vendorjs', 'vendorcss');
 });
 
 /**
@@ -83,6 +83,14 @@ gulp.task('vendorcss', function () {
         .pipe(dedupe())
         .pipe(concat('vendor.min.css'))
         .pipe(gulp.dest(ASSETS_PATH + 'css'))
+});
+
+/**
+ * Copy all fonts
+ */
+gulp.task('fonts', function () {
+    gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
+        .pipe(gulp.dest(ASSETS_PATH + 'fonts'));
 });
 
 /**
